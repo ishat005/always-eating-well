@@ -1,70 +1,244 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Always Eating Well
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Always Eating Well is a place for everyone to be able to cook good healthy recipes and always stay updated with new recipes
 
-### `npm start`
+### Problem
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Food is a basic daily need for everyone. Everyone needs to know how to cook in order to survive. Always Eating Well would be a good place where one can easily learn about new healthy recipes and would be able to cook easily. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Profile
 
-### `npm test`
+- All people:
+   - looking to learn new healthy recipe
+   - access to a variety of tasty healthy food 
+   - a good way to have changes in diet and maintain a healthy lifestyle
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Features
 
-### `npm run build`
+- As a user, I want to have access to all recipes 
+- As a user I want to have access to recipes by meal type such as - Breakfast, 
+  Lunch, Dinner, Snacks, etc
+- As a user, I want to have access to some recipes by categories such as - Quick
+  and easy, vegetarian, soups, salads
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React
+- MySQL
+- Express
+- Client libraries: 
+    - react
+    - react-router
+    - axios
+- Server libraries:
+    - knex
+    - express
 
-### `npm run eject`
+### APIs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Data from API to be stored in MySQL. Might use the actual API or would be creating a json file
+to store data
+- https://www.themealdb.com/api.php
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Sitemap
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Home page
+- List recepis
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Mockups
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Home Page
+![](homepage.png)
 
-### Code Splitting
+#### Register Page
+![](mobile-register-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Login Page
+![](mobile-login-page.png)
 
-### Analyzing the Bundle Size
+#### View Recipe Page
+![](view-recipe.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**GET /recipes**
 
-### Deployment
+- Get recipes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Response:
+```
+[
+    {
+        "id": 1,
+        "name": "Simple Homemade Tomato Soup",
+        "category": "soup",
+        "ingredients": [
+            "tomatoes", 
+            "olive oil",
+            "butter",
+            "garlic",
+            "carrots",
+            "onions",
+            "balsamic vinegar",
+            "vegetable broth",
+            "full-fat coconut milk or cream",
+            "dried thyme",
+            "red pepper flakes",
+            "fresh basil leaves",
+            "salt",
+            "pepper"
+        ],
+        "description": "This tomato soup recipe is a cold weather staple in our house. It couldn’t be simpler to make, and the ingredients are largely pantry basics that I always keep on hand. But more importantly, this tomato soup is creamy, comforting, and full of rich flavor. The tomatoes make it tangy, balsamic vinegar adds sweetness, and red pepper flakes give it a warming kick of heat. You could serve it on its own, topped with a swirl of olive oil, black pepper, and fresh basil leaves…or you could pair it with a grilled cheese sandwich. If you’re craving cozy comfort food as much as I have been recently, I definitely vote for the latter.",
+        "image": "image path",
+        "procedure": "procedure in steps"
+    },
+    ...
+]
+```
 
-### `npm run build` fails to minify
+**GET /recipe/:id**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Get recipe by id
+
+Parameters:
+- id: recipe id as number
+
+Response:
+```
+{
+    "id": 1,
+    "name": "Simple Homemade Tomato Soup",
+    "category": "soup",
+    "ingredients": [
+        "tomatoes", 
+        "olive oil",
+        "butter",
+        "garlic",
+        "carrots",
+        "onions",
+        "balsamic vinegar",
+        "vegetable broth",
+        "full-fat coconut milk or cream",
+        "dried thyme",
+        "red pepper flakes",
+        "fresh basil leaves",
+        "salt",
+        "pepper"
+    ],
+    "description": "This tomato soup recipe is a cold weather staple in our house. It couldn’t be simpler to make, and the ingredients are largely pantry basics that I always keep on hand. But more importantly, this tomato soup is creamy, comforting, and full of rich flavor. The tomatoes make it tangy, balsamic vinegar adds sweetness, and red pepper flakes give it a warming kick of heat. You could serve it on its own, topped with a swirl of olive oil, black pepper, and fresh basil leaves…or you could pair it with a grilled cheese sandwich. If you’re craving cozy comfort food as much as I have been recently, I definitely vote for the latter.",
+    "image": "image path",
+    "procedure": "procedure in steps"
+}
+```
+
+**POST /recipe/add**
+
+- User can add the recipe
+
+Response:
+```
+{
+    "id": 1,
+    "name": "Simple Homemade Tomato Soup",
+    "category": "soup",
+    "ingredients": [
+        "tomatoes", 
+        "olive oil",
+        "butter",
+        "garlic",
+        "carrots",
+        "onions",
+        "balsamic vinegar",
+        "vegetable broth",
+        "full-fat coconut milk or cream",
+        "dried thyme",
+        "red pepper flakes",
+        "fresh basil leaves",
+        "salt",
+        "pepper"
+    ],
+    "description": "This tomato soup recipe is a cold weather staple in our house. It couldn’t be simpler to make, and the ingredients are largely pantry basics that I always keep on hand. But more importantly, this tomato soup is creamy, comforting, and full of rich flavor. The tomatoes make it tangy, balsamic vinegar adds sweetness, and red pepper flakes give it a warming kick of heat. You could serve it on its own, topped with a swirl of olive oil, black pepper, and fresh basil leaves…or you could pair it with a grilled cheese sandwich. If you’re craving cozy comfort food as much as I have been recently, I definitely vote for the latter.",
+    "image": "image path",
+    "procedure": "procedure in steps"
+}
+```
+
+**POST /users/register**
+
+- Add a user account
+
+Parameters:
+
+- email: User's email
+- password: User's provided password
+
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
+
+**POST /users/login**
+
+- Login a user
+
+Parameters:
+- email: User's email
+- password: User's provided password
+
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
+
+### Auth
+
+- JWT auth
+
+## Roadmap
+
+- Create client
+    - react project with routes and boilerplate pages
+
+- Create server
+    - express project with routing, with placeholder 200 responses
+
+- Create migrations
+
+- Gather 5-10 sample recipes 
+
+- Create seeds with sample recipes data
+
+- Deploy client and server projects so all commits will be reflected in production
+
+- Feature: View recipe
+    - Implement view recipes page
+    - Create GET /recipe/:id 
+
+- Feature: Home page
+
+- Bug fixes
+
+- DEMO DAY
+
+## Nice-to-haves
+
+- Search any recipe/by a category
+- Comment feature and rate a recipe
+- Forgot password functionality
+- Ability to update or delete a blog posting (a recipe)
