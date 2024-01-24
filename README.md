@@ -42,8 +42,7 @@ Food is a basic daily need for everyone. Everyone needs to know how to cook in o
 
 ### APIs
 
-Data from API to be stored in MySQL. Might use the actual API or would be creating a json file
-to store data
+Data from API to be stored in MySQL. Might use the actual API or would be creating a json file to store data. Might also need additional API for recipes in category.
 - https://www.themealdb.com/api.php
 
 
@@ -56,16 +55,16 @@ to store data
 ### Mockups
 
 #### Home Page
-![](homepage.png)
+![](./mockups/homepage.png)
 
 #### Register Page
-![](mobile-register-page.png)
+![](./mockups/mobile-register-page.png)
 
 #### Login Page
-![](mobile-login-page.png)
+![](./mockups/mobile-login-page.png)
 
 #### View Recipe Page
-![](view-recipe.png)
+![](./mockups/view-recipe.png)
 
 
 ### Data
@@ -237,7 +236,6 @@ Response:
 - DEMO DAY
 
 ## Nice-to-haves 
-
 
 - Search any recipe/by a category
 - Comment feature and rate a recipe
