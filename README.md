@@ -66,6 +66,8 @@ Data from API to be stored in MySQL. Might use the actual API or would be creati
 #### View Recipe Page
 ![](./mockups/view-recipe.png)
 
+#### Add Recipe Page
+![](./mockups/add-recipe.png)
 
 ### Data
 
