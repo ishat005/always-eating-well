@@ -223,8 +223,6 @@ Response:
 
 - Create seeds with sample recipes data
 
-- Deploy client and server projects so all commits will be reflected in production
-
 - Feature: View recipe
     - Implement view recipe page
     - Create GET /recipe/:id 
