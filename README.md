@@ -233,6 +233,10 @@ Response:
 
 - Feature: User Profile (Register/Login)
 
+- Feature: Add a new recipe
+    - Create POST /recipe/add
+
+
 - Bug fixes
 
 - DEMO DAY
