@@ -215,7 +215,7 @@ Response:
     - react project with routes and boilerplate pages
 
 - Create server
-    - express project with routing, with placeholder 200 responses
+    - express project with routing
 
 - Create migrations
 
@@ -226,10 +226,14 @@ Response:
 - Deploy client and server projects so all commits will be reflected in production
 
 - Feature: View recipe
-    - Implement view recipes page
+    - Implement view recipe page
     - Create GET /recipe/:id 
 
 - Feature: Home page
+    - Implement view all recipes page
+    - Create GET /recipes
+
+- Feature: User Profile (Register/Login)
 
 - Bug fixes
 
