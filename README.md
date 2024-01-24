@@ -236,7 +236,8 @@ Response:
 
 - DEMO DAY
 
-## Nice-to-haves
+## Nice-to-haves 
+
 
 - Search any recipe/by a category
 - Comment feature and rate a recipe
