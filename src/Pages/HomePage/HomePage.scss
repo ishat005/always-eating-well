@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@600&display=swap');
 
 .recipes-container{
-    // position: relative;
-    // top: 4.5rem;
-    // right: 17rem;
-
     &__heading{
         font-family: "Kodchasan", sans-serif;
         color: $color-purple;
@@ -69,7 +65,7 @@
         }
 
         @include desktop{
-            width: 5%;
+            width: 9%;
             position: relative;
             top: 1.6rem;
             left: 32rem;
