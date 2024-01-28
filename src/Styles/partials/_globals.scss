@@ -1,0 +1,12 @@
+@use "./variables" as *;
+@use "./fonts" as *;
+@forward "./variables";
+@forward "./fonts";
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

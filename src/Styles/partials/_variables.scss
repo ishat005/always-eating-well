@@ -1,0 +1,33 @@
+
+$color-purple: #800080;
+$color-navy-blue: #0A1172;
+$color-grey: #555555;
+$color-light-purple: #E5E5FF;
+$color-light-grey:#808080;
+$color-green: #008000;
+$color-black: #000000;
+$color-greyish: #778899;
+
+@mixin mobile-only{
+    @media (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin tabletplus {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+@mixin tablet-only{
+    @media (min-width: 769px) and (max-width: 1279px){
+        @content;        
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1279px){
+        @content;
+    }
+}
