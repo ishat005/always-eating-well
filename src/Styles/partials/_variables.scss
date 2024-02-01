@@ -1,5 +1,6 @@
 
 $color-purple: #800080;
+$color-medium-purple: #9370DB;
 $color-navy-blue: #0A1172;
 $color-grey: #555555;
 $color-light-purple: #E5E5FF;
@@ -7,9 +8,10 @@ $color-light-grey:#808080;
 $color-green: #008000;
 $color-black: #000000;
 $color-greyish: #778899;
+$color-white: #FFFFFF;
 
 @mixin mobile-only{
-    @media (max-width: 767px){
+    @media (max-width: 768px){
         @content;
     }
 }
