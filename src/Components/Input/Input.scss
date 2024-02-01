@@ -1,0 +1,47 @@
+@import '../../Styles/partials/fonts';
+@import '../../Styles//partials/variables';
+
+.field {
+    display: flex;
+
+
+    @include mobile-only{
+        margin-top: 2rem;
+        flex-direction: row;
+    }
+
+    @include tabletplus{
+        flex-direction: column;
+    }
+
+    &__label {
+        margin-bottom: 0.5rem;
+        font-family: 'Kaushan Script';
+        color: $color-navy-blue;
+        font-weight: 400;
+        
+        @include mobile-only{
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        @include tabletplus{
+            position: relative;
+            right: 16rem;
+            margin-top: 1rem;
+        }
+
+        @include desktop{
+            position: relative;
+            right: 28rem;
+        }
+    }
+
+    &__input {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: inherit;
+    }
+}
