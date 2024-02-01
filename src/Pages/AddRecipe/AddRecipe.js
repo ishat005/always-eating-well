@@ -1,29 +1,33 @@
 import Header from "../../Components/Header/Header";
 import BackArrow from '../../Assets/Icons/back-arrow.png';
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import './AddRecipe.scss';
 
 function AddRecipe(){
     const [recipeData, setRecipeData] = useState({
-        dish_name: "",
-        dish_category: "",
-        dish_ingredients: "",
-        dish_description: "",
-        dish_procedure: "",
-        dish_img: ""
-      });
+        name: "",
+        category: "",
+        ingredients: "",
+        description: "",
+        procedure: "",
+        image: ""
+    });
+
+    const navigate = useNavigate();
 
       const addRecipeDetails = async (e) => {
         e.preventDefault();
     
         try {
           const addedItem = {
-            name: recipeData.dish_name,
-            category: recipeData.dish_category,
-            ingredients: recipeData.dish_ingredients,
-            description: recipeData.dish_description,
-            image: recipeData.dish_img,
-            procedure: recipeData.dish_procedure
+            name: recipeData.name,
+            category: recipeData.category,
+            ingredients: recipeData.ingredients,
+            description: recipeData.description,
+            procedure: recipeData.procedure,
+            image: recipeData.image,
           };
     
           const response = await axios.post(
@@ -32,18 +36,18 @@ function AddRecipe(){
           );
 
           setRecipeData({
-            dish_name: response.data[0].name,
-            dish_description: response.data[0].category,
-            dish_category: response.data[0].ingredients,
-            dish_description: response.data[0].description,
-            dish_img: response.data[0].image,
-            dish_procedure: response.data[0].procedure,
+            name: response.data[0].name,
+            description: response.data[0].category,
+            category: response.data[0].ingredients,
+            description: response.data[0].description,
+            procedure: response.data[0].procedure,
+            image: response.data[0].image,
           });
-
+          navigate("/");
         }catch (error) {
             console.log("Error", error);
           }
-        }
+      }
 
     const handleInputChange = (event) => {
         setRecipeData({
@@ -77,61 +81,60 @@ function AddRecipe(){
                 <label className="dish-name">Dish Name</label>
                 <input 
                     type="text" 
-                    name="dish-name" 
+                    name="name" 
                     className="dish-input"
-                    value={recipeData.dish_name}
+                    value={recipeData.name}
                     onChange={handleInputChange}
                 />
 
                 <label className="dish-category">Category</label>
                 <input 
                     type="text" 
-                    name="dish-category" 
+                    name="category" 
                     className="dish-category"
-                    value={recipeData.dish_category}
+                    value={recipeData.category}
                     onChange={handleInputChange}
                 />
 
                 <label className="dish-ingredients">Ingredients</label>
                 <input 
                     type="text" 
-                    name="dish-ingredients" 
+                    name="ingredients" 
                     className="dish-ingredients"
-                    value={recipeData.dish_ingredients}
+                    value={recipeData.ingredients}
                     onChange={handleInputChange}
                 />
 
                 <label className="dish-description">Description</label>
                 <textarea 
                     type="text" 
-                    name="dish-description" 
+                    name="description" 
                     className="dish-description"
-                    value={recipeData.dish_description}
+                    value={recipeData.description}
                     onChange={handleInputChange}
                 />
 
                 <label className="dish-procedure">Procedure</label>
                 <textarea 
                     type="text" 
-                    name="dish-procedure" 
+                    name="procedure" 
                     className="dish-procedure"
-                    value={recipeData.dish_procedure}
+                    value={recipeData.procedure}
                     onChange={handleInputChange}
                 />
 
                 <label className="dish-image">Image</label>
                 <input 
                     type="file" 
-                    id="img" 
-                    name="img" 
+                    id="image" 
+                    name="image" 
                     className="dish-image" 
                     accept="image/*" 
-                    value={recipeData.dish_img}
+                    value={recipeData.image}
                     onChange={handleInputChange}
                 />
-
-                <input type="submit" className="submit-form"/>
-            
+                
+              <button type="submit" className="submit-form">Submit</button> 
             </form>
         </>
     )
