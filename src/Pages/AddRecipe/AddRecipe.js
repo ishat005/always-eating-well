@@ -36,6 +36,7 @@ function AddRecipe(){
                 <input type="file" id="img" name="img" className="dish-image" accept="image/*" />
 
                 <input type="submit" className="submit-form"/>
+            
             </form>
         </>
     )
