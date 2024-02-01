@@ -35,9 +35,11 @@ const SelectedRecipe = () =>{
                     </button>
                 </Link>
 
-                <button className="add-recipe">
-                    Add new recipe
-                </button>
+                <Link to="/recipe/add">
+                    <button className="add-recipe">
+                        Add new recipe
+                    </button>
+                </Link>
 
             </div>
         
