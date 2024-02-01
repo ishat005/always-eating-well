@@ -1,0 +1,406 @@
+@use '../../Styles/partials/fonts';
+@import '../../Styles/partials/variables';
+
+.view-all-recipes{
+    background-color: $color-white;
+    color: $color-purple;
+    border-radius: 2rem;
+    padding: 0.375rem 1rem 0.375rem 1rem;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.1rem;
+
+    @include mobile-only{
+        position: relative;
+        top: 2rem;
+        width: 74%;
+        padding: 0rem 1rem 0.188rem 1rem;
+        right: 0rem;
+    }
+
+    @include tabletplus{
+        position: absolute;
+        left: 1rem;
+        top: 5.5rem;
+
+    }
+}
+
+.add-recipe-heading{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    color: $color-navy-blue;
+
+    @include mobile-only{
+        position: absolute;
+        top: 15.5rem;
+        left: 2rem;
+    }
+
+    @include tabletplus{
+        position: absolute;
+        left: 1rem;
+        top: 8.5rem;
+    }
+}
+
+.submit-recipe{
+    label.dish-name{
+        color: $color-green;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top:20rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            left: 1rem;
+            top: 12.5rem;
+        }
+    }
+
+    label.dish-category{
+        color: $color-green;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top: 24.8rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 17.5rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 18.5rem;
+            left: 1rem;
+        }
+    }
+
+    label.dish-ingredients{
+        color: $color-green;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top:29.5rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top:22.5rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 24.5rem;
+            left: 1rem;
+        }
+    }
+
+    label.dish-description{
+        color: $color-green;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top:34.1rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 27.6rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 31.1rem;
+            left: 1rem;
+        }
+    }
+
+    label.dish-procedure{
+        color: $color-green;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top:43rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 37.1rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 41.2rem;
+            left: 1rem;
+        }
+    }
+
+    label.dish-image{
+        color: $color-green;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top:53.2rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 46.3rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 51rem;
+            left: 1rem;
+        }
+    }
+
+    input.dish-input{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+
+        @include mobile-only{
+            position: absolute;
+            top: 21.5rem;
+            left: 2.1rem;
+            width: 95%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 13.8rem;
+            left: 1rem;
+            width: 95%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include tablet-only{
+            width: 80%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include desktop{
+            width: 80%;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    input.dish-category{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+
+        @include mobile-only{
+            position: absolute;
+            top: 26rem;
+            left: 2.1rem;
+            width: 95%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 18.8rem;
+            left: 1rem;
+            width: 95%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include tablet-only{
+            width: 80%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include desktop{
+            width: 80%;
+            padding: 0.7rem 1rem;
+            position: absolute;
+            top: 19.8rem;
+            left: 1rem;
+        }
+    }
+
+    input.dish-ingredients{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+
+        @include mobile-only{
+            position: absolute;
+            top: 30.7rem;
+            left: 2.1rem;
+            width: 95%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 23.8rem;
+            left: 1rem;
+            width: 95%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include tablet-only{
+            width: 80%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include desktop{
+            width: 80%;
+            padding: 0.7rem 1rem;
+            position: absolute;
+            top: 25.8rem;
+            left: 1rem;
+        }
+    }
+
+    textarea.dish-description{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+
+        @include mobile-only{
+            position: absolute;
+            top: 35.7rem;
+            left: 2rem;
+            width: 92%;
+            padding: 1rem 2rem 3rem 1rem;
+            border-radius: 1.25rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 29.3rem;
+            left: 1rem;
+            width: 92%;
+            padding: 1rem 2rem 3rem 1rem;
+            border-radius: 1.25rem;
+        }
+
+        @include tablet-only{
+            width: 80%;
+        }
+
+        @include desktop{
+            width: 80%;
+            position: absolute;
+            top: 33rem;
+            left: 1rem;
+        }
+    }
+
+    textarea.dish-procedure{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+
+        @include mobile-only{
+            position: absolute;
+            top: 44.5rem;
+            left: 2rem;
+            width: 92%;
+            padding: 1rem 2rem 4.5rem 1rem;
+            border-radius: 1.25rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 38.7rem;
+            left: 1rem;
+            width: 92%;
+            padding: 1rem 2rem 3rem 1rem;
+            border-radius: 1.25rem;
+        }
+
+        @include tablet-only{
+            width: 80%;
+        }
+
+        @include desktop{
+            width: 80%;
+            position: absolute;
+            top: 43rem;
+            left: 1rem;
+        }
+    }
+
+    input.dish-image{
+        @include mobile-only{
+            position: absolute;
+            top: 55rem;
+            left: 2rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 48.1rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 52.8rem;
+            left: 1rem;
+        }
+    }
+
+    input.submit-form{
+        font-family: "Kaushan Script";
+        font-weight: 400;
+        background-color: $color-light-purple;
+        border-color: $color-light-grey;
+        color: $color-grey;
+
+        @include mobile-only{
+            position: absolute;
+            top: 57rem;
+            left: 22rem;
+            width: 27%;
+            border-radius: 2rem;
+            padding: 0.5rem 0.8rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 51rem;
+            left: 29rem;
+            width: 25%;
+            border-radius: 2rem;
+            padding: 0.5rem 0.8rem;
+        }
+
+        @include tablet-only{
+            position: absolute;
+            top: 51rem;
+            left: 41rem;
+            width: 19%;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 54rem;
+            left: 57rem;
+            width: 19%;
+            padding: 1rem 1rem;
+        }
+    }
+}
