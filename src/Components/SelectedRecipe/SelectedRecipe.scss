@@ -1,0 +1,325 @@
+@use '../../Styles/partials/fonts';
+@import '../../Styles/partials/variables';
+
+.buttons-recipe-action{
+    position: relative;
+    bottom: 3rem;
+}
+
+.view-recipes{
+    background-color: $color-white;
+    color: $color-purple;
+    border-radius: 2rem;
+    padding: 0.375rem 1rem 0.375rem 1rem;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.1rem;
+
+    img{
+        position: relative;
+        top: 0.2rem;
+        right: 0.2rem;
+    }
+
+    @include mobile-only{
+        position: relative;
+        top: 4rem;
+        width: 48%;
+        padding: 0px 1rem 0.188rem 1rem;
+    }
+
+    @include tabletplus{
+        position: relative;
+        top: 5rem;
+        right: 9rem;
+    }
+
+    @include desktop{
+        position: relative;
+        top: 5rem;
+        right: 19rem;
+    }
+}
+
+.add-recipe{
+    background-color: $color-light-purple;
+    color: $color-grey;
+    font-family: "Kodchasan", sans-serif;
+    font-size: 1.1rem;
+
+    @include mobile-only{
+        position: relative;
+        top: 4.1rem;
+        left: 5rem;
+        border-radius: 2rem;
+        width: 40%;
+        padding: 0.1em 0.1rem 0.2rem 0rem;
+    }
+
+    @include tabletplus{
+        position: relative;
+        top: 4rem;
+        left: 7rem;
+        padding: 0.1em 0.1rem 0.2rem 0rem;
+        border-radius: 2rem;
+        width: 17%;
+    }
+
+    @include tablet-only{
+        position: relative;
+        top: 4rem;
+        left: 18rem;
+        padding: 0.1em 0.1rem 0.2rem 0rem;
+        border-radius: 2rem;
+        width: 17%;
+    }
+
+    @include desktop{
+        position: relative;
+        left: 22rem;
+        padding: 0.1em 0.1rem 0.2rem 0rem;
+        border-radius: 2rem;
+        width: 17%;
+        top: 4.95rem;
+    }
+}
+
+.content{
+    @include mobile-only{
+        position: relative;
+        top: 3rem;
+        left: 1rem;
+    }
+
+    @include tabletplus{
+        position: relative;
+        top: 3rem;
+        display: flex;
+    }
+
+    @include tablet-only{
+        display: flex;
+    }
+
+    &__left {
+        &--dish-image{
+            width: 245px;
+            height: 210px;
+
+            @include mobile-only{
+                margin-top: 1rem;
+                margin-left:1rem;
+            }
+
+            @include tabletplus{
+                position: relative;
+                top: 1rem;
+                left: 1rem;
+                width: 250px;
+                height: 285px;
+            }
+
+            @include tablet-only{
+                margin-left: 0.8rem;
+                margin-top: 1.3rem;
+                width: 250px;
+                height: 285px;
+            }
+
+            @include desktop{
+                margin-left: 1.8rem;
+                margin-top: 3rem;
+                width: 300px;
+                height: 320px;
+            }
+        }
+    }
+
+    &__right{
+        &--recipe-name{
+            font-family: "Kodchasan", sans-serif;
+            font-weight: 600;
+            color: $color-black;
+            text-transform: uppercase;
+
+            @include mobile-only{
+                position: relative;
+                top: 1rem;
+                width: 100%;
+                font-size: 1.875rem;
+                margin-left:1rem;
+            }
+
+            @include tabletplus{
+                font-size: 1.8rem;
+                margin-top: 2rem;
+                margin-left: 1rem;
+            }
+
+            @include tablet-only{
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+
+            @include desktop{
+                margin-top: 5rem;
+                padding-left: 1.2rem;
+                font-size: 2.2rem;
+            }
+        }
+
+        &--recipe-category{
+            font-family: "Kodchasan", sans-serif;
+            font-weight: 400;
+            color: $color-black;
+            text-transform: uppercase;
+
+            @include mobile-only{
+                font-size: 1.5rem;
+                margin-left:1rem;
+            }
+
+            @include desktop{
+                font-size: 1.8rem;
+            }
+        }
+
+    &--recipe-description{
+            font-family: 'Rokkitt', serif;
+            color: $color-light-grey;
+
+            @include mobile-only{
+                position: relative;
+                top: 0;
+                padding-bottom: 1rem;
+                font-size: 1rem;
+                margin-left: 1rem;
+            }
+
+            @include tabletplus{
+                font-size: 1rem;
+                padding-right: 4rem;
+                margin-left: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            @include tablet-only{
+                font-size: 0.9rem;
+                margin-left: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            @include desktop{
+                padding-bottom: 5rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.content-ingredients{
+    
+    @include mobile-only{
+        position: relative;
+        top: 2rem;
+    }
+
+    @include tabletplus{
+        position: relative;
+        top: 3rem;
+    }
+
+    @include tablet-only{
+        position: relative;
+        top: 2rem;
+    }
+
+    @include desktop{
+        position: relative;
+        top: 2.5rem;
+    }
+
+    &__heading{
+        font-family: "Kodchasan", sans-serif;
+        font-weight: 400;
+
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    }
+
+   .nav ul {
+    list-style: none;
+   }
+
+   .nav ul > li{
+        font-family: 'Rokkitt', serif;
+        color: $color-light-grey;
+
+        @include mobile-only{
+            position: relative;
+            bottom: 0.8rem;
+            font-size: 1rem;
+            margin-left:1rem;
+        }
+
+        @include desktop{
+            font-size: 1.5rem;
+        }
+   }
+}
+
+.procedure-container{
+
+    @include mobile-only{
+        position: relative;
+        top: 2rem;
+    }
+
+    @include tabletplus{
+        position: relative;
+        top: 3rem;
+    }
+
+    @include tablet-only{
+        position: relative;
+        top: 3rem;
+    }
+
+    @include desktop{
+        position: relative;
+        top: 4.2rem;
+    }
+
+    &__heading{
+        font-family: "Kodchasan", sans-serif;
+        font-weight: 400;
+
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    } 
+
+    p {
+        font-family: 'Rokkitt', serif;
+        color: $color-light-grey;
+
+        @include mobile-only{
+            font-size: 1rem;
+            margin-left: 2rem;
+        }
+
+        @include tabletplus{
+            margin-left: 2rem;
+        }
+
+        @include tablet-only{
+            margin-left: 2rem;
+        }
+
+        @include desktop{
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
+    }
+}
+
