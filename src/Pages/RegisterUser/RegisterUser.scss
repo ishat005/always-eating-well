@@ -1,0 +1,176 @@
+@use '../../Styles/partials/fonts';
+@import '../../Styles/partials/variables';
+
+.app-title{
+    margin-top: 3.5rem;
+    font-family: 'Inknut Antiqua Bold';
+    color: $color-purple;
+
+    @include mobile-only{
+        font-size: 1.4rem;
+        position: relative;
+        left: 4rem;
+    }
+}
+
+.home-link{
+    text-decoration: none;
+}
+
+.register{
+    &__heading{
+        font-family: 'Kaushan Script';
+        color: $color-navy-blue;
+    
+        @include mobile-only{
+            font-size: 1.2rem;
+            position: relative;
+            left: 4rem;
+        }
+
+        @include tabletplus{
+            font-size: 1.5rem;
+        }
+        
+        @include tablet-only{
+            font-size: 1.5rem;
+        }
+
+        @include desktop{
+            font-size: 1.7rem;
+        }
+    }
+
+    &__button{
+        background-color: $color-light-purple;
+        color: $color-grey;
+        font-family: 'Kaushan Script';
+        border-radius: 1.25rem;
+        border-color: $color-light-grey;
+
+        @include mobile-only{
+            position: relative;
+            bottom: 4rem;
+            left: 16.5rem;
+            width: 27%;
+            padding: 5px 5px;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            left: 1rem;
+            margin-top: 1rem;
+            width: 90%;
+            padding: 8px 8px;
+        }
+
+        @include desktop{
+            width: 69%;
+            padding: 12px 8px;
+        }
+    } 
+}
+
+input[type=text] {
+    margin: 8px 0;
+
+    @include mobile-only{
+        width: 40%;
+        padding: 4px 48px;
+        border-radius: 1.25rem;
+        border-color: $color-light-grey;
+        position: relative;
+        left: 3rem;
+    }
+
+    @include tabletplus{
+        width: 50%;
+        padding: 6px 48px;
+        border-radius: 1.25rem;
+        border-color: $color-greyish;
+        position: relative;
+        left: 1.6rem;
+        top: 0rem;
+    }
+}
+
+input[type=password]{
+    margin: 8px 0;
+
+    @include mobile-only{
+        width: 40%;
+        padding: 4px 48px;
+        border-radius: 1.25rem;
+        border-color: $color-greyish;
+        position: relative;
+        left: 1.5rem;
+    }
+
+    @include tabletplus{
+        width: 50%;
+        padding: 6px 48px;
+        border-radius: 1.25rem;
+        border-color: $color-greyish;
+        position: relative;
+        top: 0rem;
+        left: 1.2rem;
+    }
+}
+
+.message-block{
+    &__info{
+        @include mobile-only{
+            position: absolute;
+            left: 21rem;
+            width: 31%;
+            bottom: 4.3rem;
+            font-size: 0.8rem;
+            color: $color-grey;
+            font-family: 'Khula', sans-serif;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            left:1.2rem;
+            margin-top:3.8rem;
+            font-size: 0.9rem;
+            color: $color-grey;
+            font-family: 'Khula', sans-serif;
+        }
+    }
+
+    &__login{
+        .login-link{
+            text-decoration: none;
+
+            @include mobile-only{
+                position: absolute;
+                left: 21.7rem;
+                width: 32%;
+                bottom: 3.8rem;
+                font-size: 0.8rem;
+                color: $color-grey;
+                font-family: 'Khula', sans-serif;   
+            }
+
+            @include tabletplus{
+                position: absolute;
+                left: 2.4rem;
+                margin-top: 5rem;
+                font-size: 0.9rem;
+                color: $color-grey;
+                font-family: 'Khula', sans-serif;
+            }
+
+            @include tablet-only{
+                position: absolute;
+                left: 2.4rem;
+                margin-top: 5rem;
+                font-size: 0.9rem;
+                color: $color-grey;
+                font-family: 'Khula', sans-serif;
+            }
+        }
+    }
+}
+
