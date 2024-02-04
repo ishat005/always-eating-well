@@ -22,6 +22,7 @@ const SelectedRecipe = () =>{
                 console.log(err)
             })
     }, [params.id])
+    
 
     return(
         <>
@@ -58,7 +59,7 @@ const SelectedRecipe = () =>{
                     <nav className="nav">
                         <ul>
                             <li>{recipes.ingredients}</li>
-                        </ul>
+                        </ul>         
                     </nav>
             </div> 
 
