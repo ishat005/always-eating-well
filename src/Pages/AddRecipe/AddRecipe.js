@@ -34,7 +34,6 @@ function AddRecipe(){
 						Authorization: `Bearer ${token}`,
 					}
 				})
-				console.log(response.data);
 				setUser(response.data)
 
 			} catch(error) { 

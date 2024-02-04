@@ -299,3 +299,40 @@
     }
 }
 
+div.register__message{
+    color: $color-red;
+    font-size: 0.8rem;
+
+    @include mobile-only{
+        position: absolute;
+        top: 25rem;
+        left: 1rem;
+        width: 67%;
+    }
+
+    @include mobileplus{
+        position: absolute;
+        top: 25rem;
+        left: 1rem;
+        width: 50%;
+    }
+
+    @include tabletplus{
+        position: absolute;
+        top: 28rem;
+        left: 1rem;
+    }
+
+    @include tablet-only{
+        position: absolute;
+        top: 28rem;
+        left: 1rem;
+    }
+
+    @include desktop{
+        position: absolute;
+        top: 29rem;
+        left: 1rem;
+    }
+}
+

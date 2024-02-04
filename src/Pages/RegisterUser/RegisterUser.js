@@ -1,8 +1,9 @@
 import { useNavigate, Link } from 'react-router-dom';
 import './RegisterUser.scss';
 import axios from "axios";
-import { useState } from "react";
+import { useState } from "react"; 
 const API_URL = 'http://localhost:8080/user'
+
 
 function RegisterUser(){
     const [error, setError] = useState("");
@@ -12,21 +13,27 @@ function RegisterUser(){
     
     const handleSubmit = async (event) => {
         event.preventDefault();
-		const response = await axios.post('http://localhost:8080/user/register', {
-			email: event.target.email.value,
-			password: event.target.password.value,
-		})
 
-		if(response) {
-			setSuccess(true);
-			event.target.reset();
-            alert("Registered Successfully");
-            navigate('/users/login');
-		}
+        try{
+            const response = await axios.post(`${API_URL}/register`, {
+                email: event.target.email.value,
+                password: event.target.password.value,
+            })
+    
+            if(response) {
+                setSuccess(true);
+                event.target.reset();
+                alert("Registered Successfully");
+                navigate('/users/login');
+            }	
+            setError("");
+            event.target.reset();
 
-		try {	
+            if(setError(true)){
+                setSuccess(false);
+            }
 		} catch(error) { 
-			setError("Please enter valid unique email and a password!");		
+			setError("Please enter all required fields and valid unique email and a password!");		
 		}
 	}
     
@@ -45,9 +52,11 @@ function RegisterUser(){
                 <label className="register-password">Password:</label>                 
                 <input type="password" name="password" className="password"/>
                        
-                <button type="submit" className="register__button">
+                <button className="register__button">
                     Register
-                </button>               
+                </button>    
+
+                  {error && <div className="register__message">{error}</div>}           
             </form>
         
              <div className="message-block">
