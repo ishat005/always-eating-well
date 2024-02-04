@@ -10,7 +10,7 @@ function LoginUser(){
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+        
 		try {
 			const response = await axios.post(`${API_URL}/login`, {
 				email: event.target.email.value,

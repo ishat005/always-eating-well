@@ -41,8 +41,7 @@
     &__heading{
         font-family: 'Kaushan Script';
         color: $color-navy-blue;
-    
-        
+     
         @include mobile-only{
             font-size: 1.2rem;
             margin-left: 7em;

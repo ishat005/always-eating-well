@@ -10,7 +10,6 @@ function AddRecipe(){
     const [user, setUser] = useState(null);
 	const [failedAuth, setFailedAuth] = useState(false);
 
-     
 	useEffect(() => {
 		// getItem from sessionStorage token
 		const token = sessionStorage.getItem('token')
