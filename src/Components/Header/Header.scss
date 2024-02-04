@@ -9,6 +9,10 @@
     font-family: 'Inknut Antiqua Bold';
     color: $color-purple;
     margin-left: 1rem;
+
+    @include desktop{
+        font-size: 2rem;
+    }
 }
 
 .right-nav > .login-link{
@@ -22,6 +26,10 @@
     left: 5rem;
     font-family: 'Kaushan Script';
     color: $color-navy-blue;
+
+    @include desktop{
+        font-size: 1.5rem;
+    }
 }
 
 .right-nav{

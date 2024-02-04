@@ -11,7 +11,7 @@ const HomePage = () => {
     const getRecipes = async () => {
         try {
           const response = await axios.get(
-            'http://localhost:8080/recipes'
+            `${API_URL}`
           );
           setRecipe(response.data);
         } catch (error) {
@@ -27,17 +27,7 @@ const HomePage = () => {
         return <div>Loading...</div>;
       }
 
-    const recipeDetails = () => {
-        for(let i = 0; i < recipe.length; i++){
-            console.log(recipe[i]);
-        }
-    }
-
-    recipeDetails();
-    console.log(recipe);
-
     return(
-      
         <>
             <Header />
             <div className="recipes-container">
@@ -45,11 +35,11 @@ const HomePage = () => {
                   <input type="text" placeholder="Search a recepi" id="input"/>
                 </div>
                 <h2 className="recipes-container__heading">RECIPES</h2>
-                <Link to="/recipe/add">
-                {/* <Link to="/users/login"> */}
-                  <button className="recipes-container__add-recipe">Add new recipe</button>
-                </Link>
-               
+
+              <Link to='/users/login' className={'add-new-recipe'}>
+                Add new recipe
+              </Link>
+
                 {
                     recipe.map((recipe) => {
                         return(
@@ -61,25 +51,21 @@ const HomePage = () => {
                                 <div className="content-container__right">
                                     <h1 className="recipe-name">{recipe.name}</h1>
                                     <p className="recipe-description">{recipe.description}
-                                    
-                                      <p>
-                                        <div key={recipe.id}>
-                                          <Link to={`/recipes/${recipe.id}`} className="link" >
-                                              CONTINUE READING
-                                          </Link>
-                                        </div>
-                                      </p>
+                                        <p>
+                                          <div key={recipe.id}>
+                                            <Link to={`/recipes/${recipe.id}`} className="link" >
+                                                CONTINUE READING
+                                            </Link>
+                                          </div>
+                                        </p>
                                     </p>
                                 </div>
                             </div>
                           </div>
                         )
                     })
-              }
-              
+              } 
             </div>
-
-           
         </>
     )
 }

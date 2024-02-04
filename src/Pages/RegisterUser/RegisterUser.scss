@@ -2,14 +2,34 @@
 @import '../../Styles/partials/variables';
 
 .app-title{
-    margin-top: 3.5rem;
     font-family: 'Inknut Antiqua Bold';
     color: $color-purple;
 
     @include mobile-only{
-        font-size: 1.4rem;
-        position: relative;
-        left: 4rem;
+        margin-top: 3rem;
+        margin-left: 2em;
+        width: 115%;
+    }
+
+    @include mobileplus{
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+
+    @include tabletplus{
+        margin:auto 0;
+        margin-top: 3rem;
+    }
+
+    @include tablet-only{
+        margin:auto 0;
+        margin-top: 3rem;
+    }
+
+    @include desktop{
+        position: absolute;
+        margin-top: 3rem;
+        left: 16rem;
     }
 }
 
@@ -22,10 +42,14 @@
         font-family: 'Kaushan Script';
         color: $color-navy-blue;
     
+        
         @include mobile-only{
             font-size: 1.2rem;
-            position: relative;
-            left: 4rem;
+            margin-left: 7em;
+        }
+
+        @include mobileplus{
+            margin-left: 2rem;
         }
 
         @include tabletplus{
@@ -38,6 +62,9 @@
 
         @include desktop{
             font-size: 1.7rem;
+            position: absolute;
+            top: 5rem;
+            left: 23rem;
         }
     }
 
@@ -49,18 +76,26 @@
         border-color: $color-light-grey;
 
         @include mobile-only{
-            position: relative;
-            bottom: 4rem;
-            left: 16.5rem;
+            position: absolute;
+            left: 25.5rem;
             width: 27%;
             padding: 5px 5px;
+            top: 13rem;
+        }
+        
+        @include mobileplus{
+            position: absolute;
+            left: 34.5rem;
+            width: 18%;
+            padding: 5px 5px;
+            top: 13rem;
         }
 
         @include tabletplus{
             position: absolute;
             left: 1rem;
-            margin-top: 1rem;
-            width: 90%;
+            top: 22rem;
+            width: 85%;
             padding: 8px 8px;
         }
 
@@ -71,105 +106,195 @@
     } 
 }
 
-input[type=text] {
-    margin: 8px 0;
-
-    @include mobile-only{
-        width: 40%;
-        padding: 4px 48px;
-        border-radius: 1.25rem;
-        border-color: $color-light-grey;
-        position: relative;
-        left: 3rem;
-    }
-
-    @include tabletplus{
-        width: 50%;
-        padding: 6px 48px;
-        border-radius: 1.25rem;
-        border-color: $color-greyish;
-        position: relative;
-        left: 1.6rem;
-        top: 0rem;
-    }
-}
-
-input[type=password]{
-    margin: 8px 0;
-
-    @include mobile-only{
-        width: 40%;
-        padding: 4px 48px;
-        border-radius: 1.25rem;
-        border-color: $color-greyish;
-        position: relative;
-        left: 1.5rem;
-    }
-
-    @include tabletplus{
-        width: 50%;
-        padding: 6px 48px;
-        border-radius: 1.25rem;
-        border-color: $color-greyish;
-        position: relative;
-        top: 0rem;
-        left: 1.2rem;
-    }
-}
-
 .message-block{
-    &__info{
+    &__register-info{
+        font-size: 0.8rem;
+        color: $color-grey;
+        font-family: 'Khula', sans-serif;
+
         @include mobile-only{
             position: absolute;
-            left: 21rem;
+            left: 25rem;
             width: 31%;
-            bottom: 4.3rem;
-            font-size: 0.8rem;
-            color: $color-grey;
-            font-family: 'Khula', sans-serif;
+            top: 14.5rem;
+        }
+
+        @include mobileplus{
+            position: absolute;
+            left: 32rem;
+            width: 31%;
+            top: 14.5rem;
         }
 
         @include tabletplus{
             position: absolute;
-            left:1.2rem;
-            margin-top:3.8rem;
-            font-size: 0.9rem;
-            color: $color-grey;
-            font-family: 'Khula', sans-serif;
+            left: 1.2rem;
+            top: 23.8rem;
+        }
+
+        @include desktop{
+            top: 24.8rem;
         }
     }
 
-    &__login{
-        .login-link{
+    &__login-info{
+        .signin-link{
             text-decoration: none;
-
+            color: $color-grey;
+            font-family: 'Khula', sans-serif;  
+            font-size: 0.8rem; 
+        
             @include mobile-only{
                 position: absolute;
-                left: 21.7rem;
-                width: 32%;
-                bottom: 3.8rem;
-                font-size: 0.8rem;
-                color: $color-grey;
-                font-family: 'Khula', sans-serif;   
+                left: 25rem;
+                width: 31%;
+                top: 17.7rem;
+                padding-right: 1rem;
+            }
+
+            @include mobileplus{
+                position: absolute;
+                left: 33rem;
+                width: 31%;
+                top: 16.7rem;
             }
 
             @include tabletplus{
                 position: absolute;
-                left: 2.4rem;
-                margin-top: 5rem;
-                font-size: 0.9rem;
-                color: $color-grey;
-                font-family: 'Khula', sans-serif;
+                top: 25.8rem;
+                left: 3.3rem;
             }
 
             @include tablet-only{
                 position: absolute;
-                left: 2.4rem;
-                margin-top: 5rem;
-                font-size: 0.9rem;
-                color: $color-grey;
-                font-family: 'Khula', sans-serif;
+                top: 25.8rem;
+                left: 3.3rem;
             }
+
+            @include desktop{
+                position: absolute;
+                top: 26.8rem;
+            }
+        }
+     }
+}
+
+.register-user{
+    label.register-email{
+        color: $color-navy-blue;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top: 12em;
+            left: 1rem;
+        }
+
+        @include mobileplus{
+            position: absolute;
+            top: 10.5rem;
+            left: 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 12rem;
+            left: 1rem;
+        }
+
+        @include desktop{
+            margin: auto 0;
+        }
+    }
+
+    label.register-password{
+        color: $color-navy-blue;
+        font-family: "Kaushan Script";
+
+        @include mobile-only{
+            position: absolute;
+            top: 20rem;
+            left: 1rem;
+        }
+
+        @include mobileplus{
+            position: absolute;
+            top: 16rem;
+            left: 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 17.5rem;
+            left: 1rem;
+        }
+    }
+
+    input.email{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+        border-radius: 1.25rem;
+
+        @include mobile-only{
+            position: absolute;
+            top: 14em;
+            left: 6.1rem;
+            width: 50%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include mobileplus{
+            position: absolute;
+            top: 12.5em;
+            left: 6.1rem;
+            width: 50%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            top: 11.5rem;
+            left: 6rem;
+            width: 55%;
+            padding: 0.5rem 1rem;
+        }
+
+        @include desktop{
+            width: 36%;
+        }
+    }
+
+    input.password{
+        border-color: $color-light-grey;
+        color: $color-medium-purple;
+        border-radius: 1.25rem;
+
+        @include mobile-only{
+            position: absolute;
+            top: 20.1rem;
+            left: 6.1rem;
+            width: 50%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include mobileplus{
+            position: absolute;
+            top: 17.5rem;
+            left: 6.1rem;
+            width: 50%;
+            padding: 0.25rem 1rem;
+        }
+
+        @include tabletplus{
+            position: absolute;
+            left: 6.2rem;
+            width: 55%;
+            padding: 0.5rem 1rem;
+            top: 17.5rem;
+        }
+
+        @include desktop{
+            width: 36%;
         }
     }
 }

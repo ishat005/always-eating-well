@@ -5,22 +5,43 @@
     background-color: $color-white;
     color: $color-purple;
     border-radius: 2rem;
-    padding: 0.375rem 1rem 0.375rem 1rem;
     font-family: "Kodchasan", sans-serif;
     font-size: 1.1rem;
 
     @include mobile-only{
-        position: relative;
-        top: 2rem;
-        width: 74%;
-        padding: 0rem 1rem 0.188rem 1rem;
-        right: 0rem;
+        position: absolute;
+        left: 1rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    @include mobileplus{
+        position: absolute;
+        margin-top: 4rem;
+        width: 46%;
+        left: 1rem;
+        padding: 0.5rem 1rem;
     }
 
     @include tabletplus{
         position: absolute;
         left: 1rem;
-        top: 5.5rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    @include tablet-only{
+        position: absolute;
+        left: 1rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    @include desktop{
+        position: absolute;
+        left: 1rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
     }
 }
 
@@ -40,6 +61,11 @@
         left: 1rem;
         top: 8.5rem;
     }
+
+    @include desktop{
+        position: absolute;
+        top: 10.1rem;
+    }
 }
 
 .submit-recipe{
@@ -57,6 +83,12 @@
             position: absolute;
             left: 1rem;
             top: 12.5rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top: 14.5rem;
+            left: 1rem;
         }
     }
 
@@ -78,7 +110,7 @@
 
         @include desktop{
             position: absolute;
-            top: 18.5rem;
+            top: 20.5rem;
             left: 1rem;
         }
     }
@@ -101,7 +133,7 @@
 
         @include desktop{
             position: absolute;
-            top: 24.5rem;
+            top: 26.8rem;
             left: 1rem;
         }
     }
@@ -124,7 +156,7 @@
 
         @include desktop{
             position: absolute;
-            top: 31.1rem;
+            top: 33.1rem;
             left: 1rem;
         }
     }
@@ -147,7 +179,7 @@
 
         @include desktop{
             position: absolute;
-            top: 41.2rem;
+            top: 43.2rem;
             left: 1rem;
         }
     }
@@ -170,7 +202,7 @@
 
         @include desktop{
             position: absolute;
-            top: 51rem;
+            top: 53rem;
             left: 1rem;
         }
     }
@@ -178,6 +210,7 @@
     input.dish-input{
         border-color: $color-light-grey;
         color: $color-medium-purple;
+        border-radius: 1.25rem;
 
         @include mobile-only{
             position: absolute;
@@ -189,7 +222,7 @@
 
         @include tabletplus{
             position: absolute;
-            top: 13.8rem;
+            top: 14rem;
             left: 1rem;
             width: 95%;
             padding: 0.5rem 1rem;
@@ -203,16 +236,20 @@
         @include desktop{
             width: 80%;
             padding: 0.7rem 1rem;
+            position: absolute;
+            top: 16rem;
+            left: 1rem;
         }
     }
 
     input.dish-category{
         border-color: $color-light-grey;
         color: $color-medium-purple;
+        border-radius: 1.25rem;
 
         @include mobile-only{
             position: absolute;
-            top: 26rem;
+            top: 26.4rem;
             left: 2.1rem;
             width: 95%;
             padding: 0.25rem 1rem;
@@ -220,7 +257,7 @@
 
         @include tabletplus{
             position: absolute;
-            top: 18.8rem;
+            top: 19rem;
             left: 1rem;
             width: 95%;
             padding: 0.5rem 1rem;
@@ -235,7 +272,7 @@
             width: 80%;
             padding: 0.7rem 1rem;
             position: absolute;
-            top: 19.8rem;
+            top: 22.1rem;
             left: 1rem;
         }
     }
@@ -243,10 +280,11 @@
     input.dish-ingredients{
         border-color: $color-light-grey;
         color: $color-medium-purple;
+        border-radius: 1.25rem;
 
         @include mobile-only{
             position: absolute;
-            top: 30.7rem;
+            top: 31rem;
             left: 2.1rem;
             width: 95%;
             padding: 0.25rem 1rem;
@@ -254,7 +292,7 @@
 
         @include tabletplus{
             position: absolute;
-            top: 23.8rem;
+            top: 24rem;
             left: 1rem;
             width: 95%;
             padding: 0.5rem 1rem;
@@ -269,7 +307,7 @@
             width: 80%;
             padding: 0.7rem 1rem;
             position: absolute;
-            top: 25.8rem;
+            top: 28.4rem;
             left: 1rem;
         }
     }
@@ -303,7 +341,7 @@
         @include desktop{
             width: 80%;
             position: absolute;
-            top: 33rem;
+            top: 35rem;
             left: 1rem;
         }
     }
@@ -337,7 +375,7 @@
         @include desktop{
             width: 80%;
             position: absolute;
-            top: 43rem;
+            top: 45rem;
             left: 1rem;
         }
     }
@@ -357,7 +395,7 @@
 
         @include desktop{
             position: absolute;
-            top: 52.8rem;
+            top: 54.8rem;
             left: 1rem;
         }
     }
@@ -397,9 +435,25 @@
         @include desktop{
             position: absolute;
             top: 54rem;
-            left: 57rem;
+            left: 56rem;
             width: 19%;
             padding: 1rem 1rem;
         }
+    }
+}
+
+.logout-button{
+    background-color: $color-light-purple;
+    color: $color-grey;
+    font-family: "Kaushan Script";
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    border-color: $color-grey;
+    
+    @include mobile-only{
+        position: absolute;
+        left: 19rem;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
     }
 }

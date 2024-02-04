@@ -7,27 +7,33 @@
         color: $color-purple;
 
         @include mobile-only{
-            position: relative;
-            top: 4.5rem;
-            right: 3.1rem;
+            position: absolute;
+            top: 12.5rem;
+            left: 1rem;
+        }
+
+        @include mobileplus{
+            position: absolute;
+            top: 7.5rem;
+            left: 1rem;
         }
 
         @include tabletplus{
-            position: relative;
-            top: 5rem;
-            right: 14rem;
+            position: absolute;
+            top: 7rem;
+            left: 1rem;
         }
 
         @include tablet-only{
-            position: relative;
-            top: 5rem;
-            right: 15rem;
+            position: absolute;
+            top: 7.5rem;
+            left: 1rem;
         }
 
         @include desktop{         
-            position: relative;
-            top: 5rem;
-            right: 25rem;
+            position: absolute;
+            top: 8.5rem;
+            left: 1rem;
         }
     }
 
@@ -65,52 +71,12 @@
             font-family: 'Aref Ruqaa Ink', serif;
           }
     }
-
-    &__add-recipe{
-        color: $color-grey;
-        font-family: "Kodchasan", sans-serif;
-        font-weight: 400;
-        background-color: $color-light-purple;
-        border-color: $color-light-grey;
-
-        @include mobile-only{
-            border-radius: 2.188rem;
-            padding: 0.313rem 0.313rem;
-            width: 30%;
-            position: relative;
-            top: 1.2rem;
-            left: 10rem;
-        }
-
-        @include tabletplus{
-            width: 18%;
-            position: relative;
-            top: 1.6rem;
-            left: 12rem;
-            border-radius: 35px;
-            padding: 5px 5px;
-        }
-
-        @include tablet-only{
-            width: 12%;
-            position: relative;
-            top: 0.6rem;
-            left: 24rem;
-        }
-
-        @include desktop{
-            width: 9%;
-            position: relative;
-            top: 0.6rem;
-            left: 32rem;
-        }
-    }
 }
 
 .content-container{
     @include mobile-only{
         position: relative;
-        top: 3rem;
+        top: 7rem;
         left: 1rem;
     }
 
@@ -130,19 +96,21 @@
             height: 210px;
 
             @include mobile-only{
-                position: relative;
-                top: 2rem;
+                margin-top: 5rem;
+            }
+
+            @include mobileplus{
+                margin-top: 9rem;
             }
 
             @include tabletplus{
-                position: relative;
-                top: 2rem;
-                left: 1.5rem;
+                margin-top: 5rem;
+                margin-left: 1rem;
             }
 
             @include tablet-only{
                 margin-left: 0.8rem;
-                margin-top: 1.3rem;
+                margin-top: 6.3rem;
                 width: 248px;
                 height: 250px;
             }
@@ -151,6 +119,7 @@
                 margin-left: 1.8rem;
                 width: 300px;
                 height: 255px;
+                margin-top: 7rem;
             }
         }
     }
@@ -162,25 +131,24 @@
             color: $color-black;
 
             @include mobile-only{
-                position: relative;
-                top: 1.3rem;
                 width: 100%;
                 font-size: 1.875rem;
             }
 
             @include tabletplus{
                 font-size: 1.8rem;
+                margin-top: 5rem;
+                margin-left: 1rem;
             }
 
             @include tablet-only{
                 font-size: 2rem;
-                margin-top: 3rem;
+                margin-top: 7rem;
             }
 
             @include desktop{
-                margin-top: 2rem;
-                padding-left: 1.2rem;
-                font-size: 2rem;
+                margin-top: 8rem;
+                font-size: 2.1rem;
             }
         }
 
@@ -189,8 +157,6 @@
             color: $color-light-grey;
 
             @include mobile-only{
-                position: relative;
-                top: 1rem;
                 padding-bottom: 1rem;
                 font-size: 17px;
             }
@@ -210,6 +176,7 @@
 
             @include desktop{
                 padding-bottom: 5rem;
+                font-size: 1.8rem;
             }
         }
     }
@@ -250,5 +217,59 @@
         @include desktop{
             font-size: 1.5rem;
         }
+    }
+}
+
+.add-new-recipe{
+    background-color: $color-light-purple;
+    text-decoration: none;
+    color: $color-grey;
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    border-color: $color-grey;
+
+    @include mobile-only{
+        width: 30%;
+        position: absolute;
+        top: 13.6rem;
+        left: 16rem;
+        padding: 0.5rem 1rem;
+        border-radius: 2.25rem;
+    }
+
+    @include mobileplus{
+        width: 17%;
+        position: absolute;
+        top: 8.5rem;
+        left: 23rem;
+        padding: 0.5rem 1rem;
+        border-radius: 2.25rem;
+    }
+
+    @include tabletplus{
+        width: 20%;
+        position: absolute;
+        top: 7.5rem;
+        left: 29rem;
+        padding: 0.5rem 0rem;
+        border-radius: 2.25rem;
+    }
+
+    @include tablet-only{
+        width: 15%;
+        position: absolute;
+        top: 8rem;
+        left: 46rem;
+        padding: 0.5rem 0rem;
+        border-radius: 2.25rem;
+    }
+
+    @include desktop{
+        width: 6%;
+        position: absolute;
+        top: 9rem;
+        left: 65rem;
+        border-radius: 2.25rem;
+        padding: 0.8rem 1rem;
     }
 }

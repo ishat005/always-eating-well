@@ -16,7 +16,6 @@ const SelectedRecipe = () =>{
     useEffect(()=> {
         axios.get(`${API_URL}/${params.id}`)
             .then(res => {
-                console.log(res)
                 setRecipes(res.data)
             })
             .catch(err =>{
@@ -35,12 +34,11 @@ const SelectedRecipe = () =>{
                     </button>
                 </Link>
 
-                <Link to="/recipe/add">
+                <Link to="/users/login">
                     <button className="add-recipe">
                         Add new recipe
                     </button>
                 </Link>
-
             </div>
         
             <div className="content">

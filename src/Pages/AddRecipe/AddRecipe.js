@@ -4,8 +4,67 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './AddRecipe.scss';
+const API_URL = 'http://localhost:8080/recipes';
 
 function AddRecipe(){
+    const [user, setUser] = useState(null);
+	const [failedAuth, setFailedAuth] = useState(false);
+
+     
+	useEffect(() => {
+		// getItem from sessionStorage token
+		const token = sessionStorage.getItem('token')
+
+		// If theres not a token then setFailedAuth to true and return 
+		if(!token){
+			setFailedAuth(true)
+		}
+
+		// Otherwise we will check to see if the current user is authorized to be on this dashboard
+		// Make a get request to "http://localhost:8080/user/current"
+		const authorizeUser = async () => {
+			// Pass Headers on this request 
+			// use the Authorization key to pass a Bearer token
+			// Use string interpolation to pass `Bearer ${token}` as value for authorization
+			// On successful response setUser to response.data
+			// On failure setFailed auth to true
+			try {
+				const response = await axios.get('http://localhost:8080/user/current', {
+					headers: {
+						Authorization: `Bearer ${token}`,
+					}
+				})
+				console.log(response.data);
+				setUser(response.data)
+
+			} catch(error) { 
+				console.log(error);
+				setFailedAuth(true)
+			}
+		}
+		authorizeUser()
+
+		axios
+			.get("http://localhost:8080/user", {
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		})
+		.then((response) => {
+			console.log('user auth', response);
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+	}, []);
+
+    
+    const handleLogout = () => {
+		sessionStorage.removeItem("token");
+		setUser(null);
+		setFailedAuth(true);
+	};
+
     const [recipeData, setRecipeData] = useState({
         name: "",
         category: "",
@@ -31,7 +90,7 @@ function AddRecipe(){
           };
     
           const response = await axios.post(
-            `http://localhost:8080/recipes`,
+            `${API_URL}`,
             addedItem
           );
 
@@ -56,9 +115,24 @@ function AddRecipe(){
         });
     };
 
-    if (!recipeData) {
-        return <div>Loading...</div>;
-      }
+    if (failedAuth) {
+		return (
+			<main>
+				<p>You must be logged in to see this page.</p>
+				<p>
+					<Link to="/users/login">Log in</Link>
+				</p>
+			</main>
+		);
+	}
+
+    if (user === null && !recipeData) {
+		return (
+			<main>
+				<p>Loading...</p>
+			</main>
+		);
+	}
 
     return(
         <>
@@ -68,6 +142,12 @@ function AddRecipe(){
                         <img src={BackArrow} width="30" height="25"/>
                         VIEW RECIPES
                     </button>
+            </Link>
+
+            <Link to="/users/login">
+                <button className="logout-button"  onClick={handleLogout}>
+                    Logout
+                </button>
             </Link>
 
             <h3 className="add-recipe-heading">ADD NEW RECIPE</h3>
@@ -139,6 +219,5 @@ function AddRecipe(){
         </>
     )
 }
-
 
 export default AddRecipe;

@@ -9,15 +9,22 @@ $color-green: #008000;
 $color-black: #000000;
 $color-greyish: #778899;
 $color-white: #FFFFFF;
+$color-red: #FF0000;
 
 @mixin mobile-only{
-    @media (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 600px){
+        @content;
+    }
+}
+
+@mixin mobileplus{
+    @media (min-width: 600px) and (max-width: 767px){
         @content;
     }
 }
 
 @mixin tabletplus {
-    @media (min-width: 768px){
+    @media (min-width: 767px){
         @content;
     }
 }
