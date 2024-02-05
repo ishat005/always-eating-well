@@ -456,4 +456,20 @@
         margin-top: 1rem;
         padding: 0.5rem 1rem;
     }
+
+    @include tablet-only{
+        position: absolute;
+        top: 6.2rem;
+        left: 30rem;
+        padding: 0.5rem 1rem;
+        width: 20%;
+    }
+
+    @include tabletplus{
+        position: absolute;
+        top: 6.2rem;
+        left: 30rem;
+        padding: 0.5rem 1rem;
+        width: 20%;
+    }
 }
