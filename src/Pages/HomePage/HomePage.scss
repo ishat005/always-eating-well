@@ -100,9 +100,9 @@
             }
 
             @include mobileplus{
-                    position: relative;
-                    bottom: 0rem;
-                    left: 0rem;
+                top: 0;
+                left: 0;
+                position: relative;
             }
 
             @include tabletplus{
@@ -133,8 +133,15 @@
             color: $color-black;
 
             @include mobile-only{
-                width: 100%;
                 font-size: 1.875rem;
+                width: 100%;
+                position: absolute;
+                top: 15rem;
+            }
+
+            @include mobileplus{
+                position: relative;
+                top: 6rem;
             }
 
             @include tabletplus{
@@ -159,14 +166,18 @@
             color: $color-light-grey;
 
             @include mobile-only{
-                padding-bottom: 1rem;
                 font-size: 17px;
+                padding-bottom: 1rem;
+                position: relative;
+                top: 5rem;
             }
 
             
             @include mobileplus{
-                padding-bottom: 0rem;
                 font-size: 17px;
+                padding-bottom: 0;
+                position: relative;
+                top: 6rem;
             }
 
             @include tabletplus{
@@ -237,18 +248,18 @@
     border-color: $color-grey;
 
     @include mobile-only{
-        width: 30%;
+        border-radius: 2rem;
+        left: 17rem;
+        padding: 0rem 0.8rem;
         position: absolute;
-        top: 13.6rem;
-        left: 16rem;
-        padding: 0.5rem 1rem;
-        border-radius: 2.25rem;
+        top: 13rem;
+        width: 30%;
     }
 
     @include mobileplus{
         width: 17%;
         position: absolute;
-        top: 8.5rem;
+        top: 8.1rem;
         left: 23rem;
         padding: 0.5rem 1rem;
         border-radius: 2.25rem;
