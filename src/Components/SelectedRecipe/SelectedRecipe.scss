@@ -84,7 +84,7 @@
 
     @include tabletplus{
         position: absolute;
-        top: 7.7rem;
+        top: 5.5rem;
         left: 25rem;
         padding: 0rem 0.8rem;
         border-radius: 2rem;
@@ -93,7 +93,7 @@
 
     @include tablet-only{
         position: absolute;
-        top: 8.1em;
+        top: 5rem;
         left: 25rem;
         padding: 0rem 0.8rem;
         border-radius: 2rem;
@@ -106,7 +106,7 @@
         padding: 0rem 0.85rem;
         border-radius: 4rem;
         width: 23%;
-        top: 9.9rem;
+        top: 5.9rem;
         font-size: 2rem;
     }
 }
