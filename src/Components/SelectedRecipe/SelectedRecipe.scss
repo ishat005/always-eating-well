@@ -1,11 +1,6 @@
 @use '../../Styles/partials/fonts';
 @import '../../Styles/partials/variables';
 
-.buttons-recipe-action{
-    position: relative;
-    bottom: 3rem;
-}
-
 .view-recipes{
     background-color: $color-white;
     color: $color-purple;
@@ -22,7 +17,7 @@
 
     @include mobile-only{
         position: absolute;
-        top: 4rem;
+        top: 13rem;
         width: 48%;
         padding: 0px 1rem 0.188rem 1rem;
         left: 1rem;
@@ -30,7 +25,7 @@
 
     @include mobileplus{
         position: absolute;
-        top: 4rem;
+        top: 6rem;
         width: 30%;
         padding: 0px 1rem 0.188rem 1rem;
         left: 1rem;
@@ -71,7 +66,7 @@
 
     @include mobile-only{
         position: absolute;
-        top: 4rem;
+        top: 13rem;
         left: 16rem;
         border-radius: 2rem;
         width: 40%;
@@ -80,39 +75,39 @@
 
     @include mobileplus{
         position: absolute;
-        top: 4.3rem;
+        top: 6.2rem;
         left: 19rem;
         border-radius: 2rem;
-        width: 34%;
-        padding: 0.5rem 0.8rem;
+        width: 33%;
+        padding: 0rem 0.8rem;
     }
 
     @include tabletplus{
         position: absolute;
-        top: 4.5rem;
+        top: 4.7rem;
         left: 25rem;
-        padding: 0.1em 0.1rem 0.2rem 0rem;
+        padding: 0rem 0.8rem;
         border-radius: 2rem;
         width: 23%;
     }
 
     @include tablet-only{
         position: absolute;
-        top: 4.6rem;
-        padding: 0.5rem 0.5rem;
+        top: 4.8rem;
+        left: 25rem;
+        padding: 0rem 0.8rem;
         border-radius: 2rem;
         width: 23%;
-        left: 38rem;
     }
 
     @include desktop{
         position: absolute;
         left: 54rem;
-        padding: 0.5rem 1rem;
+        padding: 0rem 0.85rem;
         border-radius: 4rem;
         width: 23%;
-        top: 5.95rem;
-        font-size: 2.0rem;
+        top: 8.9rem;
+        font-size: 2rem;
     }
 }
 
@@ -139,7 +134,7 @@
             height: 210px;
 
             @include mobile-only{
-                margin-top: 5rem;
+                margin-top: 7rem;
                 margin-left:1rem;
             }
 
@@ -199,7 +194,7 @@
             @include desktop{
                 margin-top: 12rem;
                 padding-left: 1.2rem;
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
         }
 
@@ -246,7 +241,7 @@
 
             @include desktop{
                 padding-bottom: 5rem;
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 margin-left: 3rem;
             }
         }

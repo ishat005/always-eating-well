@@ -36,9 +36,15 @@ const HomePage = () => {
                 </div>
                 <h2 className="recipes-container__heading">RECIPES</h2>
 
-              <Link to='/users/login' className={'add-new-recipe'}>
+              {/* <Link to='/users/login' className={'add-new-recipe'}>
                 Add new recipe
-              </Link>
+              </Link> */}
+
+                <Link to="/users/login">
+                    <button className="add-recipe">
+                        Add new recipe
+                    </button>
+                </Link>
 
                 {
                     recipe.map((recipe) => {

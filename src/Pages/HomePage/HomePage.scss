@@ -100,7 +100,9 @@
             }
 
             @include mobileplus{
-                margin-top: 9rem;
+                    position: relative;
+                    bottom: 0rem;
+                    left: 0rem;
             }
 
             @include tabletplus{
@@ -161,6 +163,12 @@
                 font-size: 17px;
             }
 
+            
+            @include mobileplus{
+                padding-bottom: 0rem;
+                font-size: 17px;
+            }
+
             @include tabletplus{
                 font-size: 1rem;
                 padding-right: 4rem;
@@ -175,7 +183,7 @@
             }
 
             @include desktop{
-                padding-bottom: 5rem;
+                padding-bottom: 0rem;
                 font-size: 1.8rem;
             }
         }
