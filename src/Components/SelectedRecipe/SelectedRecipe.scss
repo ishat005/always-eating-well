@@ -75,7 +75,7 @@
 
     @include mobileplus{
         position: absolute;
-        top: 6.2rem;
+        top: 8.2rem;
         left: 19rem;
         border-radius: 2rem;
         width: 33%;
@@ -83,30 +83,30 @@
     }
 
     @include tabletplus{
-        position: absolute;
-        top: 5.5rem;
-        left: 25rem;
-        padding: 0.8rem 0.8rem;
         border-radius: 2rem;
+        left: 25rem;
+        padding: 0.1rem 0.1rem;
+        position: absolute;
+        top: 7.6rem;
         width: 23%;
     }
 
     @include tablet-only{
-        position: absolute;
-        top: 5rem;
-        left: 25rem;
-        padding: 0.8rem 0.8rem;
         border-radius: 2rem;
+        left: 25rem;
+        padding: 0.1rem 0.1rem;
+        position: absolute;
+        top: 7.6rem;
         width: 23%;
     }
 
     @include desktop{
         position: absolute;
         left: 54rem;
-        padding: 0.8rem 0.85rem;
+        padding: 0rem 0rem;
         border-radius: 4rem;
         width: 23%;
-        top: 5.9rem;
+        top: 8.9rem;
         font-size: 2rem;
     }
 }

@@ -16,10 +16,6 @@ function Header(){
                     </Link>
                 </div>
             </div>
-
-        {/* <div className="search">
-            <input type="text" placeholder="Search a recepi" id="input"/>
-        </div> */}
         </>
     )
 }

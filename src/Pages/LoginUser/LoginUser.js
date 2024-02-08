@@ -36,7 +36,7 @@ function LoginUser(){
                 <label className="login-email">Email:</label>
                 <input type="text" name="email" className="email" />
                     
-                <label className="login-password">Password</label>
+                <label className="login-password">Password:</label>
                 <input type="password" name="password" className="password"/>
                    
                 <button className="login-user__button">

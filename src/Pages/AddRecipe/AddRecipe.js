@@ -74,10 +74,11 @@ function AddRecipe(){
 
     const navigate = useNavigate();
 
-      const addRecipeDetails = async (e) => {
+    const addRecipeDetails = async (e) => {
         e.preventDefault();
-    
+
         try {
+
           const addedItem = {
             name: recipeData.name,
             category: recipeData.category,
@@ -211,7 +212,8 @@ function AddRecipe(){
                     value={recipeData.image}
                     onChange={handleInputChange}
                 />
-                
+
+
               <button type="submit" className="submit-form">Submit</button> 
             </form>
         </>

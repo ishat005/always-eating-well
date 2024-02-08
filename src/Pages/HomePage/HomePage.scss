@@ -141,7 +141,7 @@
 
             @include mobileplus{
                 position: relative;
-                top: 6rem;
+                top: 0rem;
             }
 
             @include tabletplus{
@@ -177,7 +177,7 @@
                 font-size: 17px;
                 padding-bottom: 0;
                 position: relative;
-                top: 6rem;
+                top: 0rem;
             }
 
             @include tabletplus{
@@ -292,3 +292,4 @@
         padding: 0.8rem 1rem;
     }
 }
+
